@@ -15,200 +15,196 @@ msgstr ""
 msgid "MA Webb"
 msgstr ""
 
-#: maw-simple-forms.php:69 maw-simple-forms.php:78 maw-simple-forms.php:103
+#: maw-simple-forms.php:86 maw-simple-forms.php:95 maw-simple-forms.php:120
 msgid "Forms"
 msgstr ""
 
-#: maw-simple-forms.php:70 maw-simple-forms.php:426 blocks/maw-form/index.js:40
+#: maw-simple-forms.php:87 maw-simple-forms.php:442 blocks/maw-form/index.js:40
 msgid "Form"
 msgstr ""
 
-#: maw-simple-forms.php:71 maw-simple-forms.php:106
+#: maw-simple-forms.php:88 maw-simple-forms.php:123
 msgid "Add New"
 msgstr ""
 
-#: maw-simple-forms.php:72
+#: maw-simple-forms.php:89
 msgid "Add New Form"
 msgstr ""
 
-#: maw-simple-forms.php:73
+#: maw-simple-forms.php:90
 msgid "Edit Form"
 msgstr ""
 
-#: maw-simple-forms.php:74
+#: maw-simple-forms.php:91
 msgid "New Form"
 msgstr ""
 
-#: maw-simple-forms.php:75
+#: maw-simple-forms.php:92
 msgid "View Form"
 msgstr ""
 
-#: maw-simple-forms.php:76
+#: maw-simple-forms.php:93
 msgid "Search Forms"
 msgstr ""
 
-#: maw-simple-forms.php:77
+#: maw-simple-forms.php:94
 msgid "No forms found"
 msgstr ""
 
-#: maw-simple-forms.php:94 maw-simple-forms.php:95 maw-simple-forms.php:114
+#: maw-simple-forms.php:111 maw-simple-forms.php:112 maw-simple-forms.php:131
 msgid "MAW Forms"
 msgstr ""
 
-#: maw-simple-forms.php:109 maw-simple-forms.php:401
+#: maw-simple-forms.php:126 maw-simple-forms.php:417
 msgid "Entries"
 msgstr ""
 
-#: maw-simple-forms.php:115
+#: maw-simple-forms.php:132
 msgid "Create forms, place the shortcode on a page, and manage entries here."
 msgstr ""
 
-#: maw-simple-forms.php:121
+#: maw-simple-forms.php:138
 msgid "Form Fields"
 msgstr ""
 
-#: maw-simple-forms.php:123 blocks/maw-form/index.js:36
+#: maw-simple-forms.php:140 blocks/maw-form/index.js:36
 msgid "Settings"
 msgstr ""
 
-#: maw-simple-forms.php:140
+#: maw-simple-forms.php:157
 msgid "Label"
 msgstr ""
 
-#: maw-simple-forms.php:141
+#: maw-simple-forms.php:158
 msgid "Name (slug)"
 msgstr ""
 
-#: maw-simple-forms.php:142
+#: maw-simple-forms.php:159
 msgid "Type"
 msgstr ""
 
-#: maw-simple-forms.php:143
+#: maw-simple-forms.php:160
 msgid "Required"
 msgstr ""
 
-#: maw-simple-forms.php:144
+#: maw-simple-forms.php:161
 msgid "Remove"
 msgstr ""
 
-#: maw-simple-forms.php:155 maw-simple-forms.php:181
+#: maw-simple-forms.php:172 maw-simple-forms.php:198
 msgid "Text"
 msgstr ""
 
-#: maw-simple-forms.php:156 maw-simple-forms.php:182
+#: maw-simple-forms.php:173 maw-simple-forms.php:199
 msgid "Email"
 msgstr ""
 
-#: maw-simple-forms.php:157 maw-simple-forms.php:183
+#: maw-simple-forms.php:174 maw-simple-forms.php:200
 msgid "Phone"
 msgstr ""
 
-#: maw-simple-forms.php:158 maw-simple-forms.php:184
+#: maw-simple-forms.php:175 maw-simple-forms.php:201
 msgid "Textarea"
 msgstr ""
 
-#: maw-simple-forms.php:168
+#: maw-simple-forms.php:185
 msgid "Add field"
 msgstr ""
 
-#: maw-simple-forms.php:208 maw-simple-forms.php:272
+#: maw-simple-forms.php:225 maw-simple-forms.php:288
 msgid "Thanks! Your message has been sent."
 msgstr ""
 
-#: maw-simple-forms.php:210
+#: maw-simple-forms.php:227
 msgid "Recipient email"
 msgstr ""
 
-#: maw-simple-forms.php:212
+#: maw-simple-forms.php:229
 msgid "Success message"
 msgstr ""
 
-#: maw-simple-forms.php:214
-msgid "Place the form with shortcode:"
-msgstr ""
-
-#: maw-simple-forms.php:256
+#: maw-simple-forms.php:272
 msgid "Form not found."
 msgstr ""
 
-#: maw-simple-forms.php:259
+#: maw-simple-forms.php:275
 msgid "This form has no fields yet."
 msgstr ""
 
-#: maw-simple-forms.php:304
+#: maw-simple-forms.php:320
 msgid "Send"
 msgstr ""
 
-#: maw-simple-forms.php:334
+#: maw-simple-forms.php:350
 msgid "Invalid email address."
 msgstr ""
 
-#: maw-simple-forms.php:339
+#: maw-simple-forms.php:355
 msgid "A required field is missing."
 msgstr ""
 
-#: maw-simple-forms.php:359
+#: maw-simple-forms.php:375
 #, php-format
 msgid "New submission: %s"
 msgstr ""
 
-#: maw-simple-forms.php:405
+#: maw-simple-forms.php:421
 msgid "All"
 msgstr ""
 
-#: maw-simple-forms.php:406
+#: maw-simple-forms.php:422
 msgid "New"
 msgstr ""
 
-#: maw-simple-forms.php:407 maw-simple-forms.php:457
+#: maw-simple-forms.php:423 maw-simple-forms.php:473
 msgid "Completed"
 msgstr ""
 
-#: maw-simple-forms.php:408
+#: maw-simple-forms.php:424
 msgid "Trash"
 msgstr ""
 
-#: maw-simple-forms.php:424
+#: maw-simple-forms.php:440
 msgid "ID"
 msgstr ""
 
-#: maw-simple-forms.php:425
+#: maw-simple-forms.php:441
 msgid "Date"
 msgstr ""
 
-#: maw-simple-forms.php:427
+#: maw-simple-forms.php:443
 msgid "Data"
 msgstr ""
 
-#: maw-simple-forms.php:428
+#: maw-simple-forms.php:444
 msgid "Status"
 msgstr ""
 
-#: maw-simple-forms.php:429
+#: maw-simple-forms.php:445
 msgid "Actions"
 msgstr ""
 
-#: maw-simple-forms.php:443
+#: maw-simple-forms.php:459
 msgid "Show"
 msgstr ""
 
-#: maw-simple-forms.php:461
+#: maw-simple-forms.php:477
 msgid "Move to Trash"
 msgstr ""
 
-#: maw-simple-forms.php:464
+#: maw-simple-forms.php:480
 msgid "Delete permanently?"
 msgstr ""
 
-#: maw-simple-forms.php:464
+#: maw-simple-forms.php:480
 msgid "Delete"
 msgstr ""
 
-#: maw-simple-forms.php:469
+#: maw-simple-forms.php:485
 msgid "No entries."
 msgstr ""
 
-#: maw-simple-forms.php:534
+#: maw-simple-forms.php:573
 msgid "No form selected."
 msgstr ""
 

@@ -4,7 +4,7 @@
  * Description: Simple, ad-free form plugin. Build fields, receive entries, email notifications, and manage status (Completed/Trash).
  * Version: 0.1.2
  * Author: MA Webb
- * Text Domain: maw-forms
+ * Text Domain: maw-simple-forms
  * Domain Path: /languages
  * License: GPL-2.0-or-later
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -42,7 +42,7 @@ class MAW_Simple_Forms {
 
         // i18n
         add_action('plugins_loaded', function () {
-            load_plugin_textdomain('maw-forms', false, dirname(plugin_basename(__FILE__)) . '/languages');
+            load_plugin_textdomain('maw-simple-forms', false, dirname(plugin_basename(__FILE__)) . '/languages');
         });
 
         // Hooks
@@ -83,16 +83,16 @@ class MAW_Simple_Forms {
     /** CPT: Forms */
     public function register_cpt() {
         $labels = [
-            'name'               => __('Forms', 'maw-forms'),
-            'singular_name'      => __('Form', 'maw-forms'),
-            'add_new'            => __('Add New', 'maw-forms'),
-            'add_new_item'       => __('Add New Form', 'maw-forms'),
-            'edit_item'          => __('Edit Form', 'maw-forms'),
-            'new_item'           => __('New Form', 'maw-forms'),
-            'view_item'          => __('View Form', 'maw-forms'),
-            'search_items'       => __('Search Forms', 'maw-forms'),
-            'not_found'          => __('No forms found', 'maw-forms'),
-            'menu_name'          => __('Forms', 'maw-forms'),
+            'name'               => __('Forms', 'maw-simple-forms'),
+            'singular_name'      => __('Form', 'maw-simple-forms'),
+            'add_new'            => __('Add New', 'maw-simple-forms'),
+            'add_new_item'       => __('Add New Form', 'maw-simple-forms'),
+            'edit_item'          => __('Edit Form', 'maw-simple-forms'),
+            'new_item'           => __('New Form', 'maw-simple-forms'),
+            'view_item'          => __('View Form', 'maw-simple-forms'),
+            'search_items'       => __('Search Forms', 'maw-simple-forms'),
+            'not_found'          => __('No forms found', 'maw-simple-forms'),
+            'menu_name'          => __('Forms', 'maw-simple-forms'),
         ];
         register_post_type('maw_form', [
             'labels' => $labels,
@@ -108,8 +108,8 @@ class MAW_Simple_Forms {
     /** Admin menu */
     public function admin_menu() {
         add_menu_page(
-            __('MAW Forms', 'maw-forms'),
-            __('MAW Forms', 'maw-forms'),
+            __('MAW Forms', 'maw-simple-forms'),
+            __('MAW Forms', 'maw-simple-forms'),
             'manage_options',
             'maw_forms_root',
             [$this, 'render_forms_landing'],
@@ -117,27 +117,27 @@ class MAW_Simple_Forms {
             25
         );
 
-        add_submenu_page('maw_forms_root', __('Forms', 'maw-forms'), __('Forms', 'maw-forms'),
+        add_submenu_page('maw_forms_root', __('Forms', 'maw-simple-forms'), __('Forms', 'maw-simple-forms'),
             'manage_options', 'edit.php?post_type=maw_form');
 
-        add_submenu_page('maw_forms_root', __('Add New', 'maw-forms'), __('Add New', 'maw-forms'),
+        add_submenu_page('maw_forms_root', __('Add New', 'maw-simple-forms'), __('Add New', 'maw-simple-forms'),
             'manage_options', 'post-new.php?post_type=maw_form');
 
-        add_submenu_page('maw_forms_root', __('Entries', 'maw-forms'), __('Entries', 'maw-forms'),
+        add_submenu_page('maw_forms_root', __('Entries', 'maw-simple-forms'), __('Entries', 'maw-simple-forms'),
             'manage_options', 'maw_entries', [$this, 'render_entries_page']);
     }
 
     public function render_forms_landing() {
-        echo '<div class="wrap"><h1>'.esc_html__('MAW Forms', 'maw-forms').'</h1><p>'.
-            esc_html__('Create forms, place the shortcode on a page, and manage entries here.', 'maw-forms').
+        echo '<div class="wrap"><h1>'.esc_html__('MAW Forms', 'maw-simple-forms').'</h1><p>'.
+            esc_html__('Create forms, place the shortcode on a page, and manage entries here.', 'maw-simple-forms').
             '</p></div>';
     }
 
     /** Metaboxes */
     public function add_form_metaboxes() {
-        add_meta_box('maw_form_fields', __('Form Fields', 'maw-forms'),
+        add_meta_box('maw_form_fields', __('Form Fields', 'maw-simple-forms'),
             [$this, 'metabox_fields'], 'maw_form', 'normal', 'high');
-        add_meta_box('maw_form_settings', __('Settings', 'maw-forms'),
+        add_meta_box('maw_form_settings', __('Settings', 'maw-simple-forms'),
             [$this, 'metabox_settings'], 'maw_form', 'side', 'default');
     }
 
@@ -154,11 +154,11 @@ class MAW_Simple_Forms {
         <table class="maw-table" id="maw-fields-table">
             <thead>
                 <tr>
-                    <th><?php _e('Label', 'maw-forms'); ?></th>
-                    <th><?php _e('Name (slug)', 'maw-forms'); ?></th>
-                    <th><?php _e('Type', 'maw-forms'); ?></th>
-                    <th><?php _e('Required', 'maw-forms'); ?></th>
-                    <th><?php _e('Remove', 'maw-forms'); ?></th>
+                    <th><?php _e('Label', 'maw-simple-forms'); ?></th>
+                    <th><?php _e('Name (slug)', 'maw-simple-forms'); ?></th>
+                    <th><?php _e('Type', 'maw-simple-forms'); ?></th>
+                    <th><?php _e('Required', 'maw-simple-forms'); ?></th>
+                    <th><?php _e('Remove', 'maw-simple-forms'); ?></th>
                 </tr>
             </thead>
             <tbody>
@@ -169,10 +169,10 @@ class MAW_Simple_Forms {
                     <td>
                         <?php $type = $f['type'] ?? 'text'; ?>
                         <select name="maw_fields[<?php echo $i; ?>][type]">
-                            <option value="text" <?php selected($type,'text'); ?>><?php esc_html_e('Text','maw-forms'); ?></option>
-                            <option value="email" <?php selected($type,'email'); ?>><?php esc_html_e('Email','maw-forms'); ?></option>
-                            <option value="tel" <?php selected($type,'tel'); ?>><?php esc_html_e('Phone','maw-forms'); ?></option>
-                            <option value="textarea" <?php selected($type,'textarea'); ?>><?php esc_html_e('Textarea','maw-forms'); ?></option>
+                            <option value="text" <?php selected($type,'text'); ?>><?php esc_html_e('Text','maw-simple-forms'); ?></option>
+                            <option value="email" <?php selected($type,'email'); ?>><?php esc_html_e('Email','maw-simple-forms'); ?></option>
+                            <option value="tel" <?php selected($type,'tel'); ?>><?php esc_html_e('Phone','maw-simple-forms'); ?></option>
+                            <option value="textarea" <?php selected($type,'textarea'); ?>><?php esc_html_e('Textarea','maw-simple-forms'); ?></option>
                         </select>
                     </td>
                     <td><input type="checkbox" name="maw_fields[<?php echo $i; ?>][required]" <?php checked(!empty($f['required'])); ?>></td>
@@ -182,7 +182,7 @@ class MAW_Simple_Forms {
             </tbody>
         </table>
         <div class="maw-repeater-actions">
-            <button type="button" class="button" id="maw-add-row">+ <?php esc_html_e('Add field','maw-forms'); ?></button>
+            <button type="button" class="button" id="maw-add-row">+ <?php esc_html_e('Add field','maw-simple-forms'); ?></button>
         </div>
         <script>
         (function(){
@@ -195,10 +195,10 @@ class MAW_Simple_Forms {
                     <td><input type="text" name="maw_fields[${idx}][name]" class="regular-text"></td>
                     <td>
                         <select name="maw_fields[${idx}][type]">
-                            <option value="text"><?php echo esc_js(__('Text','maw-forms')); ?></option>
-                            <option value="email"><?php echo esc_js(__('Email','maw-forms')); ?></option>
-                            <option value="tel"><?php echo esc_js(__('Phone','maw-forms')); ?></option>
-                            <option value="textarea"><?php echo esc_js(__('Textarea','maw-forms')); ?></option>
+                            <option value="text"><?php echo esc_js(__('Text','maw-simple-forms')); ?></option>
+                            <option value="email"><?php echo esc_js(__('Email','maw-simple-forms')); ?></option>
+                            <option value="tel"><?php echo esc_js(__('Phone','maw-simple-forms')); ?></option>
+                            <option value="textarea"><?php echo esc_js(__('Textarea','maw-simple-forms')); ?></option>
                         </select>
                     </td>
                     <td><input type="checkbox" name="maw_fields[${idx}][required]"></td>
@@ -222,11 +222,11 @@ class MAW_Simple_Forms {
     public function metabox_settings($post) {
         $email = get_post_meta($post->ID, '_maw_notify_email', true);
         $success = get_post_meta($post->ID, '_maw_success_message', true);
-        if (!$success) $success = __('Thanks! Your message has been sent.', 'maw-forms');
+        if (!$success) $success = __('Thanks! Your message has been sent.', 'maw-simple-forms');
         ?>
-        <p><label for="maw_notify_email"><strong><?php _e('Recipient email', 'maw-forms'); ?></strong></label></p>
+        <p><label for="maw_notify_email"><strong><?php _e('Recipient email', 'maw-simple-forms'); ?></strong></label></p>
         <input type="email" name="maw_notify_email" id="maw_notify_email" class="regular-text" value="<?php echo esc_attr($email); ?>" placeholder="you@example.com">
-        <p><label for="maw_success_message"><strong><?php _e('Success message', 'maw-forms'); ?></strong></label></p>
+        <p><label for="maw_success_message"><strong><?php _e('Success message', 'maw-simple-forms'); ?></strong></label></p>
         <textarea name="maw_success_message" id="maw_success_message" class="large-text" rows="3"><?php echo esc_textarea($success); ?></textarea>
         
         <?php
@@ -269,10 +269,10 @@ class MAW_Simple_Forms {
             $post = get_page_by_path(sanitize_title($atts['slug']), OBJECT, 'maw_form');
             if ($post) $form_id = $post->ID;
         }
-        if (!$form_id) return '<div class="maw-form-error">'.esc_html__('Form not found.', 'maw-forms').'</div>';
+        if (!$form_id) return '<div class="maw-form-error">'.esc_html__('Form not found.', 'maw-simple-forms').'</div>';
 
         $fields = get_post_meta($form_id, '_maw_fields', true);
-        if (empty($fields)) return '<div class="maw-form-error">'.esc_html__('This form has no fields yet.', 'maw-forms').'</div>';
+        if (empty($fields)) return '<div class="maw-form-error">'.esc_html__('This form has no fields yet.', 'maw-simple-forms').'</div>';
 
         $success = isset($_GET['maw_success']) && intval($_GET['maw_success']) === $form_id;
 
@@ -285,7 +285,7 @@ class MAW_Simple_Forms {
         ob_start();
         if ($success) {
             $msg = get_post_meta($form_id, '_maw_success_message', true);
-            echo '<div class="alert alert-success mb-4">'.esc_html($msg ?: __('Thanks! Your message has been sent.', 'maw-forms')).'</div>';
+            echo '<div class="alert alert-success mb-4">'.esc_html($msg ?: __('Thanks! Your message has been sent.', 'maw-simple-forms')).'</div>';
         }
 
         echo '<form method="post" class="maw-form">';
@@ -317,7 +317,7 @@ class MAW_Simple_Forms {
             echo '</div>';
         }
 
-        echo '<button type="submit" class="btn btn-primary">'.esc_html__('Send', 'maw-forms').'</button>';
+        echo '<button type="submit" class="btn btn-primary">'.esc_html__('Send', 'maw-simple-forms').'</button>';
         echo '</form>';
 
         return ob_get_clean();
@@ -347,12 +347,12 @@ class MAW_Simple_Forms {
             if ($type === 'email') {
                 $val = sanitize_email($val);
                 if ($req && !is_email($val)) {
-                    wp_die(__('Invalid email address.', 'maw-forms'));
+                    wp_die(__('Invalid email address.', 'maw-simple-forms'));
                 }
             } else {
                 $val = sanitize_textarea_field($val);
                 if ($req && $val === '') {
-                    wp_die(__('A required field is missing.', 'maw-forms'));
+                    wp_die(__('A required field is missing.', 'maw-simple-forms'));
                 }
             }
             $clean[$name] = $val;
@@ -372,7 +372,7 @@ class MAW_Simple_Forms {
         // Send email
         $to = get_post_meta($form_id, '_maw_notify_email', true);
         if ($to && is_email($to)) {
-            $subject = sprintf(__('New submission: %s', 'maw-forms'), get_the_title($form_id));
+            $subject = sprintf(__('New submission: %s', 'maw-simple-forms'), get_the_title($form_id));
             $fields_conf = get_post_meta($form_id, '_maw_fields', true);
             $lines = [];
             foreach ($fields_conf as $f) {
@@ -414,14 +414,14 @@ class MAW_Simple_Forms {
 
         ?>
         <div class="wrap">
-            <h1><?php _e('Entries', 'maw-forms'); ?></h1>
+            <h1><?php _e('Entries', 'maw-simple-forms'); ?></h1>
             <ul class="subsubsub">
                 <?php
                 $links = [
-                    'all' => __('All', 'maw-forms'),
-                    'new' => __('New', 'maw-forms'),
-                    'completed' => __('Completed', 'maw-forms'),
-                    'trash' => __('Trash', 'maw-forms'),
+                    'all' => __('All', 'maw-simple-forms'),
+                    'new' => __('New', 'maw-simple-forms'),
+                    'completed' => __('Completed', 'maw-simple-forms'),
+                    'trash' => __('Trash', 'maw-simple-forms'),
                 ];
                 $base = admin_url('admin.php?page=maw_entries');
                 $i=0;
@@ -437,12 +437,12 @@ class MAW_Simple_Forms {
             <table class="widefat fixed striped">
                 <thead>
                     <tr>
-                        <th><?php _e('ID', 'maw-forms'); ?></th>
-                        <th><?php _e('Date', 'maw-forms'); ?></th>
-                        <th><?php _e('Form', 'maw-forms'); ?></th>
-                        <th><?php _e('Data', 'maw-forms'); ?></th>
-                        <th><?php _e('Status', 'maw-forms'); ?></th>
-                        <th><?php _e('Actions', 'maw-forms'); ?></th>
+                        <th><?php _e('ID', 'maw-simple-forms'); ?></th>
+                        <th><?php _e('Date', 'maw-simple-forms'); ?></th>
+                        <th><?php _e('Form', 'maw-simple-forms'); ?></th>
+                        <th><?php _e('Data', 'maw-simple-forms'); ?></th>
+                        <th><?php _e('Status', 'maw-simple-forms'); ?></th>
+                        <th><?php _e('Actions', 'maw-simple-forms'); ?></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -456,7 +456,7 @@ class MAW_Simple_Forms {
                             <td><?php echo esc_html($form_title); ?></td>
                             <td>
                                 <?php
-                                echo '<details><summary>'.esc_html__('Show','maw-forms').'</summary><pre style="white-space:pre-wrap">';
+                                echo '<details><summary>'.esc_html__('Show','maw-simple-forms').'</summary><pre style="white-space:pre-wrap">';
                                 foreach ($data as $k=>$v) {
                                     echo esc_html("$k: $v") . "\n";
                                 }
@@ -470,19 +470,19 @@ class MAW_Simple_Forms {
                                 $base = admin_url('admin-post.php');
                                 if ($e->status !== 'completed') {
                                     $url1 = add_query_arg(['action'=>'maw_entry_action','id'=>$e->id,'do'=>'completed','_wpnonce'=>$nonce], $base);
-                                    echo '<a class="button" href="'.esc_url($url1).'">'.__('Completed','maw-forms').'</a> ';
+                                    echo '<a class="button" href="'.esc_url($url1).'">'.__('Completed','maw-simple-forms').'</a> ';
                                 }
                                 if ($e->status !== 'trash') {
                                     $url2 = add_query_arg(['action'=>'maw_entry_action','id'=>$e->id,'do'=>'trash','_wpnonce'=>$nonce], $base);
-                                    echo '<a class="button" href="'.esc_url($url2).'">'.__('Move to Trash','maw-forms').'</a> ';
+                                    echo '<a class="button" href="'.esc_url($url2).'">'.__('Move to Trash','maw-simple-forms').'</a> ';
                                 }
                                 $url3 = add_query_arg(['action'=>'maw_entry_action','id'=>$e->id,'do'=>'delete','_wpnonce'=>$nonce], $base);
-                                echo '<a class="button button-link-delete" href="'.esc_url($url3).'" onclick="return confirm(\''.esc_js(__('Delete permanently?', 'maw-forms')).'\')">'.__('Delete','maw-forms').'</a>';
+                                echo '<a class="button button-link-delete" href="'.esc_url($url3).'" onclick="return confirm(\''.esc_js(__('Delete permanently?', 'maw-simple-forms')).'\')">'.__('Delete','maw-simple-forms').'</a>';
                                 ?>
                             </td>
                         </tr>
                     <?php endforeach; else: ?>
-                        <tr><td colspan="6"><?php _e('No entries.', 'maw-forms'); ?></td></tr>
+                        <tr><td colspan="6"><?php _e('No entries.', 'maw-simple-forms'); ?></td></tr>
                     <?php endif; ?>
                 </tbody>
             </table>
@@ -553,7 +553,7 @@ class MAW_Simple_Forms {
 
         // JS translations
         if (function_exists('wp_set_script_translations')) {
-            wp_set_script_translations('maw-form-block', 'maw-forms', plugin_dir_path(__FILE__) . 'languages');
+            wp_set_script_translations('maw-form-block', 'maw-simple-forms', plugin_dir_path(__FILE__) . 'languages');
         }
 
         wp_register_style(
@@ -570,7 +570,7 @@ class MAW_Simple_Forms {
             'render_callback' => function($attributes) {
                 $form_id = isset($attributes['formId']) ? intval($attributes['formId']) : 0;
                 if ($form_id <= 0) {
-                    return '<div class="maw-form-error">'.esc_html__('No form selected.', 'maw-forms').'</div>';
+                    return '<div class="maw-form-error">'.esc_html__('No form selected.', 'maw-simple-forms').'</div>';
                 }
                 return $this->shortcode_form(['id' => $form_id]);
             },

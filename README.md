@@ -205,7 +205,7 @@ A sample workflow can:
 * package `maw-simple-forms.zip`
 * attach the ZIP to a GitHub Release when you push a tag (e.g., `v0.1.2`)
 
-See `.github/workflows/release.yml` in this repo (or add one based on your CI preferences).
+
 
 ---
 
@@ -228,7 +228,7 @@ Issues and PRs are welcome! Please keep changes focused and include testing note
 
 ## License
 
-* **GPL‑2.0‑or‑later** (recommended for WordPress.org compatibility), or
+* **GPL‑2.0‑or‑later**
 
 
 

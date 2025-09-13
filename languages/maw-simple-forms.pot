@@ -1,0 +1,268 @@
+# Copyright (C) 2025 MA Webb
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: MAW Simple Forms 0.1.2\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/maw-simple-forms\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2025-09-13T14:21:50+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: maw-simple-forms\n"
+
+#. Plugin Name of the plugin
+#: maw-simple-forms.php
+msgid "MAW Simple Forms"
+msgstr ""
+
+#. Description of the plugin
+#: maw-simple-forms.php
+msgid "Simple, ad-free form plugin. Build fields, receive entries, email notifications, and manage status (Completed/Trash)."
+msgstr ""
+
+#. Author of the plugin
+#: maw-simple-forms.php
+msgid "MA Webb"
+msgstr ""
+
+#: maw-simple-forms.php:86
+#: maw-simple-forms.php:95
+#: maw-simple-forms.php:120
+msgid "Forms"
+msgstr ""
+
+#: maw-simple-forms.php:87
+#: maw-simple-forms.php:442
+#: blocks/maw-form/index.js:40
+msgid "Form"
+msgstr ""
+
+#: maw-simple-forms.php:88
+#: maw-simple-forms.php:123
+msgid "Add New"
+msgstr ""
+
+#: maw-simple-forms.php:89
+msgid "Add New Form"
+msgstr ""
+
+#: maw-simple-forms.php:90
+msgid "Edit Form"
+msgstr ""
+
+#: maw-simple-forms.php:91
+msgid "New Form"
+msgstr ""
+
+#: maw-simple-forms.php:92
+msgid "View Form"
+msgstr ""
+
+#: maw-simple-forms.php:93
+msgid "Search Forms"
+msgstr ""
+
+#: maw-simple-forms.php:94
+msgid "No forms found"
+msgstr ""
+
+#: maw-simple-forms.php:111
+#: maw-simple-forms.php:112
+#: maw-simple-forms.php:131
+msgid "MAW Forms"
+msgstr ""
+
+#: maw-simple-forms.php:126
+#: maw-simple-forms.php:417
+msgid "Entries"
+msgstr ""
+
+#: maw-simple-forms.php:132
+msgid "Create forms, place the shortcode on a page, and manage entries here."
+msgstr ""
+
+#: maw-simple-forms.php:138
+msgid "Form Fields"
+msgstr ""
+
+#: maw-simple-forms.php:140
+#: blocks/maw-form/index.js:36
+msgid "Settings"
+msgstr ""
+
+#: maw-simple-forms.php:157
+msgid "Label"
+msgstr ""
+
+#: maw-simple-forms.php:158
+msgid "Name (slug)"
+msgstr ""
+
+#: maw-simple-forms.php:159
+msgid "Type"
+msgstr ""
+
+#: maw-simple-forms.php:160
+msgid "Required"
+msgstr ""
+
+#: maw-simple-forms.php:161
+msgid "Remove"
+msgstr ""
+
+#: maw-simple-forms.php:172
+#: maw-simple-forms.php:198
+msgid "Text"
+msgstr ""
+
+#: maw-simple-forms.php:173
+#: maw-simple-forms.php:199
+msgid "Email"
+msgstr ""
+
+#: maw-simple-forms.php:174
+#: maw-simple-forms.php:200
+msgid "Phone"
+msgstr ""
+
+#: maw-simple-forms.php:175
+#: maw-simple-forms.php:201
+msgid "Textarea"
+msgstr ""
+
+#: maw-simple-forms.php:185
+msgid "Add field"
+msgstr ""
+
+#: maw-simple-forms.php:225
+#: maw-simple-forms.php:288
+msgid "Thanks! Your message has been sent."
+msgstr ""
+
+#: maw-simple-forms.php:227
+msgid "Recipient email"
+msgstr ""
+
+#: maw-simple-forms.php:229
+msgid "Success message"
+msgstr ""
+
+#: maw-simple-forms.php:272
+msgid "Form not found."
+msgstr ""
+
+#: maw-simple-forms.php:275
+msgid "This form has no fields yet."
+msgstr ""
+
+#: maw-simple-forms.php:320
+msgid "Send"
+msgstr ""
+
+#: maw-simple-forms.php:350
+msgid "Invalid email address."
+msgstr ""
+
+#: maw-simple-forms.php:355
+msgid "A required field is missing."
+msgstr ""
+
+#: maw-simple-forms.php:375
+#, php-format
+msgid "New submission: %s"
+msgstr ""
+
+#: maw-simple-forms.php:421
+msgid "All"
+msgstr ""
+
+#: maw-simple-forms.php:422
+msgid "New"
+msgstr ""
+
+#: maw-simple-forms.php:423
+#: maw-simple-forms.php:473
+msgid "Completed"
+msgstr ""
+
+#: maw-simple-forms.php:424
+msgid "Trash"
+msgstr ""
+
+#: maw-simple-forms.php:440
+msgid "ID"
+msgstr ""
+
+#: maw-simple-forms.php:441
+msgid "Date"
+msgstr ""
+
+#: maw-simple-forms.php:443
+msgid "Data"
+msgstr ""
+
+#: maw-simple-forms.php:444
+msgid "Status"
+msgstr ""
+
+#: maw-simple-forms.php:445
+msgid "Actions"
+msgstr ""
+
+#: maw-simple-forms.php:459
+msgid "Show"
+msgstr ""
+
+#: maw-simple-forms.php:477
+msgid "Move to Trash"
+msgstr ""
+
+#: maw-simple-forms.php:480
+msgid "Delete permanently?"
+msgstr ""
+
+#: maw-simple-forms.php:480
+msgid "Delete"
+msgstr ""
+
+#: maw-simple-forms.php:485
+msgid "No entries."
+msgstr ""
+
+#: maw-simple-forms.php:573
+msgid "No form selected."
+msgstr ""
+
+#: blocks/maw-form/index.js:13
+msgid "Insert a MAW form and choose which one in the panel."
+msgstr ""
+
+#: blocks/maw-form/index.js:26
+msgid "— Select a form —"
+msgstr ""
+
+#: blocks/maw-form/index.js:49
+msgid "Loading forms…"
+msgstr ""
+
+#: blocks/maw-form/index.js:51
+msgid "Choose a form in the settings panel (gear icon)."
+msgstr ""
+
+#: blocks/maw-form/index.js:54
+msgid "Form ID:"
+msgstr ""
+
+#: blocks/maw-form/block.json
+msgctxt "block title"
+msgid "MAW Form"
+msgstr ""
+
+#: blocks/maw-form/block.json
+msgctxt "block description"
+msgid "Infoga ett MAW-formulär och välj vilket i panelen."
+msgstr ""

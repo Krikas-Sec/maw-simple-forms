@@ -10,7 +10,7 @@
     title: 'MAW Form',
     icon: 'feedback',
     category: 'widgets',
-    description: __('Insert a MAW form and choose which one in the panel.', 'maw-forms'),
+    description: __('Insert a MAW form and choose which one in the panel.', 'maw-simple-forms'),
     attributes: { formId: { type: 'number', default: 0 } },
 
     edit: (props) => {
@@ -23,7 +23,7 @@
 
       const isLoading = (typeof forms === 'undefined');
 
-      const options = [{ label: __('— Select a form —', 'maw-forms'), value: 0 }];
+      const options = [{ label: __('— Select a form —', 'maw-simple-forms'), value: 0 }];
       if (Array.isArray(forms)) {
         forms.forEach((f) => options.push({
           label: (f.title && f.title.rendered) ? f.title.rendered : ('#' + f.id),
@@ -33,11 +33,11 @@
 
       return el(Fragment, null,
         el(InspectorControls, null,
-          el(PanelBody, { title: __('Settings', 'maw-forms'), initialOpen: true },
+          el(PanelBody, { title: __('Settings', 'maw-simple-forms'), initialOpen: true },
             isLoading
               ? el(Spinner, null)
               : el(SelectControl, {
-                  label: __('Form', 'maw-forms'),
+                  label: __('Form', 'maw-simple-forms'),
                   value: formId,
                   options: options,
                   onChange: (val) => setAttributes({ formId: parseInt(val, 10) || 0 })
@@ -46,12 +46,12 @@
         ),
         el('div', { className: 'maw-form-block-preview', style: { border: '1px dashed #ccc', padding: '12px' } },
           el('strong', null, 'MAW Form'),
-          isLoading && el('p', null, el(Spinner, null), ' ', __('Loading forms…', 'maw-forms')),
+          isLoading && el('p', null, el(Spinner, null), ' ', __('Loading forms…', 'maw-simple-forms')),
           (!isLoading && !formId) && el(Notice, { status: 'info', isDismissible: false },
-            __('Choose a form in the settings panel (gear icon).', 'maw-forms')
+            __('Choose a form in the settings panel (gear icon).', 'maw-simple-forms')
           ),
           (!isLoading && formId > 0) && el('p', null,
-            __('Form ID:', 'maw-forms'), ' ', el('code', null, String(formId))
+            __('Form ID:', 'maw-simple-forms'), ' ', el('code', null, String(formId))
           )
         )
       );
