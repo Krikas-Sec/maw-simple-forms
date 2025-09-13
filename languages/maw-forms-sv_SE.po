@@ -1,0 +1,243 @@
+#. Plugin Name of the plugin
+#: maw-simple-forms.php
+msgid "MAW Simple Forms"
+msgstr ""
+
+#. Description of the plugin
+#: maw-simple-forms.php
+msgid ""
+"Simple, ad-free form plugin. Build fields, receive entries, email "
+"notifications, and manage status (Completed/Trash)."
+msgstr ""
+
+#. Author of the plugin
+#: maw-simple-forms.php
+msgid "MA Webb"
+msgstr ""
+
+#: maw-simple-forms.php:69 maw-simple-forms.php:78 maw-simple-forms.php:103
+msgid "Forms"
+msgstr ""
+
+#: maw-simple-forms.php:70 maw-simple-forms.php:426 blocks/maw-form/index.js:40
+msgid "Form"
+msgstr ""
+
+#: maw-simple-forms.php:71 maw-simple-forms.php:106
+msgid "Add New"
+msgstr ""
+
+#: maw-simple-forms.php:72
+msgid "Add New Form"
+msgstr ""
+
+#: maw-simple-forms.php:73
+msgid "Edit Form"
+msgstr ""
+
+#: maw-simple-forms.php:74
+msgid "New Form"
+msgstr ""
+
+#: maw-simple-forms.php:75
+msgid "View Form"
+msgstr ""
+
+#: maw-simple-forms.php:76
+msgid "Search Forms"
+msgstr ""
+
+#: maw-simple-forms.php:77
+msgid "No forms found"
+msgstr ""
+
+#: maw-simple-forms.php:94 maw-simple-forms.php:95 maw-simple-forms.php:114
+msgid "MAW Forms"
+msgstr ""
+
+#: maw-simple-forms.php:109 maw-simple-forms.php:401
+msgid "Entries"
+msgstr ""
+
+#: maw-simple-forms.php:115
+msgid "Create forms, place the shortcode on a page, and manage entries here."
+msgstr ""
+
+#: maw-simple-forms.php:121
+msgid "Form Fields"
+msgstr ""
+
+#: maw-simple-forms.php:123 blocks/maw-form/index.js:36
+msgid "Settings"
+msgstr ""
+
+#: maw-simple-forms.php:140
+msgid "Label"
+msgstr ""
+
+#: maw-simple-forms.php:141
+msgid "Name (slug)"
+msgstr ""
+
+#: maw-simple-forms.php:142
+msgid "Type"
+msgstr ""
+
+#: maw-simple-forms.php:143
+msgid "Required"
+msgstr ""
+
+#: maw-simple-forms.php:144
+msgid "Remove"
+msgstr ""
+
+#: maw-simple-forms.php:155 maw-simple-forms.php:181
+msgid "Text"
+msgstr ""
+
+#: maw-simple-forms.php:156 maw-simple-forms.php:182
+msgid "Email"
+msgstr ""
+
+#: maw-simple-forms.php:157 maw-simple-forms.php:183
+msgid "Phone"
+msgstr ""
+
+#: maw-simple-forms.php:158 maw-simple-forms.php:184
+msgid "Textarea"
+msgstr ""
+
+#: maw-simple-forms.php:168
+msgid "Add field"
+msgstr ""
+
+#: maw-simple-forms.php:208 maw-simple-forms.php:272
+msgid "Thanks! Your message has been sent."
+msgstr ""
+
+#: maw-simple-forms.php:210
+msgid "Recipient email"
+msgstr ""
+
+#: maw-simple-forms.php:212
+msgid "Success message"
+msgstr ""
+
+#: maw-simple-forms.php:214
+msgid "Place the form with shortcode:"
+msgstr ""
+
+#: maw-simple-forms.php:256
+msgid "Form not found."
+msgstr ""
+
+#: maw-simple-forms.php:259
+msgid "This form has no fields yet."
+msgstr ""
+
+#: maw-simple-forms.php:304
+msgid "Send"
+msgstr ""
+
+#: maw-simple-forms.php:334
+msgid "Invalid email address."
+msgstr ""
+
+#: maw-simple-forms.php:339
+msgid "A required field is missing."
+msgstr ""
+
+#: maw-simple-forms.php:359
+#, php-format
+msgid "New submission: %s"
+msgstr ""
+
+#: maw-simple-forms.php:405
+msgid "All"
+msgstr ""
+
+#: maw-simple-forms.php:406
+msgid "New"
+msgstr ""
+
+#: maw-simple-forms.php:407 maw-simple-forms.php:457
+msgid "Completed"
+msgstr ""
+
+#: maw-simple-forms.php:408
+msgid "Trash"
+msgstr ""
+
+#: maw-simple-forms.php:424
+msgid "ID"
+msgstr ""
+
+#: maw-simple-forms.php:425
+msgid "Date"
+msgstr ""
+
+#: maw-simple-forms.php:427
+msgid "Data"
+msgstr ""
+
+#: maw-simple-forms.php:428
+msgid "Status"
+msgstr ""
+
+#: maw-simple-forms.php:429
+msgid "Actions"
+msgstr ""
+
+#: maw-simple-forms.php:443
+msgid "Show"
+msgstr ""
+
+#: maw-simple-forms.php:461
+msgid "Move to Trash"
+msgstr ""
+
+#: maw-simple-forms.php:464
+msgid "Delete permanently?"
+msgstr ""
+
+#: maw-simple-forms.php:464
+msgid "Delete"
+msgstr ""
+
+#: maw-simple-forms.php:469
+msgid "No entries."
+msgstr ""
+
+#: maw-simple-forms.php:534
+msgid "No form selected."
+msgstr ""
+
+#: blocks/maw-form/index.js:13
+msgid "Insert a MAW form and choose which one in the panel."
+msgstr ""
+
+#: blocks/maw-form/index.js:26
+msgid " Select a form "
+msgstr ""
+
+#: blocks/maw-form/index.js:49
+msgid "Loading forms"
+msgstr ""
+
+#: blocks/maw-form/index.js:51
+msgid "Choose a form in the settings panel (gear icon)."
+msgstr ""
+
+#: blocks/maw-form/index.js:54
+msgid "Form ID:"
+msgstr ""
+
+#: blocks/maw-form/block.json
+msgctxt "block title"
+msgid "MAW Form"
+msgstr ""
+
+#: blocks/maw-form/block.json
+msgctxt "block description"
+msgid "Infoga ett MAW-formulr och vlj vilket i panelen."
+msgstr ""
