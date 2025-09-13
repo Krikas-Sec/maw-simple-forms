@@ -175,7 +175,7 @@ class MAW_Simple_Forms {
                             <option value="textarea" <?php selected($type,'textarea'); ?>><?php esc_html_e('Textarea','maw-simple-forms'); ?></option>
                         </select>
                     </td>
-                    <td><input type="checkbox" name="maw_fields[<?php echo $i; ?>][required]" <?php checked(!empty($f['required'])); ?>></td>
+                    <td><input type="checkbox" name="maw_fields[<?php echo $i; ?>][required]" <?php checked(!empty($f['req'])); ?>></td>
                     <td><button class="button maw-remove-row" type="button">✖</button></td>
                 </tr>
             <?php endforeach; endif; ?>
@@ -281,16 +281,20 @@ class MAW_Simple_Forms {
             wp_register_style('bootstrap-5', 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css', [], '5.3.3');
             wp_enqueue_style('bootstrap-5');
         }
+        
+        $wrapper_id = 'maw-form-' . $form_id;
 
         ob_start();
         if ($success) {
             $msg = get_post_meta($form_id, '_maw_success_message', true);
             echo '<div class="alert alert-success mb-4">'.esc_html($msg ?: __('Thanks! Your message has been sent.', 'maw-simple-forms')).'</div>';
         }
+        $current_url = ( is_ssl() ? 'https://' : 'http://' ) . ($_SERVER['HTTP_HOST'] ?? '') . ($_SERVER['REQUEST_URI'] ?? '/');
 
-        echo '<form method="post" class="maw-form">';
+        echo '<form method="post" id="'.esc_attr($wrapper_id).'" class="maw-form">';
         wp_nonce_field('maw_submit_'.$form_id, '_maw_nonce');
         echo '<input type="hidden" name="maw_form_id" value="'.intval($form_id).'">';
+        echo '<input type="hidden" name="maw_redirect" value="'.esc_url($current_url).'">';
         // Honeypot
         echo '<div class="position-absolute" style="left:-9999px;top:-9999px;">';
         echo '<label>Do not fill this field</label>';
@@ -372,6 +376,7 @@ class MAW_Simple_Forms {
         // Send email
         $to = get_post_meta($form_id, '_maw_notify_email', true);
         if ($to && is_email($to)) {
+            /* translators: %s: form title */
             $subject = sprintf(__('New submission: %s', 'maw-simple-forms'), get_the_title($form_id));
             $fields_conf = get_post_meta($form_id, '_maw_fields', true);
             $lines = [];
@@ -386,7 +391,26 @@ class MAW_Simple_Forms {
         }
 
         // Redirect with success
-        wp_safe_redirect(add_query_arg(['maw_success' => $form_id], wp_get_referer() ?: home_url('/')));
+        $redirect = isset($_POST['maw_redirect']) ? esc_url_raw($_POST['maw_redirect']) : '';
+        if (!$redirect) {
+            $redirect = wp_get_referer();
+        }
+        if (!$redirect) {
+            // last fallback if nothing else was available
+            $redirect = home_url('/');
+        }
+
+        //Clear any old param/anchor, add new one
+        $redirect = remove_query_arg('maw_success', $redirect);
+        $redirect = explode('#', $redirect, 2)[0]; //remove old hash
+        $redirect = add_query_arg(['maw_success' => $form_id], $redirect);
+        // Add anchors so the page jumps to the form after redirect
+        $redirect .= '#maw-form-' . $form_id;
+
+        // Allow devs to adjust via filters if they want
+        $redirect = apply_filters('maw_forms_redirect', $redirect, $form_id);
+
+        wp_safe_redirect($redirect);
         exit;
     }
 

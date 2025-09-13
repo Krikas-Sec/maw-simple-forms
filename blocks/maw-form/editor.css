@@ -1,1 +1,7 @@
 .maw-form-block-preview code { background: #f6f7f7; padding: 2px 6px; border-radius: 3px; }
+/* Simple visual frame for the block in the editor */
+.wp-block-mawebb-maw-form .maw-form-block-preview {
+  border: 1px dashed #ccc;
+  padding: 12px;
+  background: #fff;
+}
