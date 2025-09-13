@@ -1,0 +1,14 @@
+# macOS
+.DS_Store
+
+# Node/JS (om du lägger till något senare)
+node_modules/
+dist/
+*.log
+
+# Editor backups
+*.po~
+
+# Composer (om du lägger in senare)
+vendor/
+composer.lock
